@@ -1,49 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Страничка для души</title>
-  <style>
-    body { font-family: Georgia, serif; background: #fef9f4; color: #3e2f1c; margin: 0; padding: 0; }
-    header { background: #8c6239; color: white; padding: 2rem; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    main { max-width: 800px; margin: auto; padding: 2rem; }
-    form input, form textarea, form button {
-      display: block; width: 100%; margin: 1rem 0; padding: 1rem; font-size: 1rem;
+
+  <script>
+    if (location.hostname === "prichikos.ru") {
+      location.href = "https://www.prichikos.ru" + location.pathname + location.search + location.hash;
     }
-    form button { background: #8c6239; color: white; border: none; cursor: pointer; }
-    .examples { background: #fff4e6; padding: 1rem; border-left: 5px solid #8c6239; }
-    footer { text-align: center; color: #999; padding: 2rem; }
+  </script>
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #fef9f4;
+      color: #3e2f1c;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #8c6239;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    form input,
+    form textarea,
+    form button {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    form button {
+      background: #8c6239;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .examples {
+      background: #fff4e6;
+      padding: 1rem;
+      border-left: 5px solid #8c6239;
+    }
+    footer {
+      text-align: center;
+      color: #999;
+      padding: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Страничка для души</h1>
-    <p>Стихи и тёплые строки на заказ</p>
+    <p>Стихи и тёплые строки на заказ 💌</p>
   </header>
+
   <main>
-    <section>
-      <h2>Закажите стих:</h2>
-      <form>
-        <input type="text" placeholder="Ваше имя или псевдоним" required>
-        <input type="text" placeholder="Кому посвящён стих">
-        <input type="text" placeholder="Повод / тема">
-        <textarea rows="4" placeholder="О чём должен быть стих?"></textarea>
-        <button type="submit">Получить стих</button>
-      </form>
-    </section>
-    <section class="examples">
-      <h3>Примеры:</h3>
-      <p>🌹 О любви Юлии из Жлобина</p>
-      <p>🎂 Поздравление дочке Милане</p>
-      <p>🕊️ Молитвенная поэма</p>
-    </section>
-    <section>
-      <h2>Поговорите с Поэтом:</h2>
-      <p><a href="https://chatgpt.com/g/g-6815c300a1b8819196d1f56c76520396-poet-sochinitel" target="_blank">Открыть поэта в GPT</a></p>
-    </section>
+    <form>
+      <label for="theme">О чём должен быть стих?</label>
+      <textarea id="theme" name="theme" rows="4" placeholder="Например: признание в любви, поздравление дочке, молитва..."></textarea>
+      <button type="submit">Получить стих</button>
+    </form>
+
+    <div class="examples">
+      <strong>Примеры:</strong>
+      <ul>
+        <li>🌹 О любви Юлии из Жлобина</li>
+        <li>🎂 Поздравление дочке Милане</li>
+        <li>🕊️ Молитвенная поэма</li>
+      </ul>
+    </div>
+
+    <h3>Поговорите с Поэтом:</h3>
+    <p><a href="https://t.me/poet_sochinitel_gpt" target="_blank">Открыть поэта в GPT</a></p>
   </main>
-  <footer>© 2025 Страничка для души | Стихи от сердца</footer>
+
+  <footer>
+    © 2025 Страничка для души | Стихи от сердца
+  </footer>
 </body>
 </html>
